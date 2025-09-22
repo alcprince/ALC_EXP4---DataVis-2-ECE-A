@@ -51,8 +51,42 @@ Mindy = eceboard.loc[(eceboard['Average'] >= 55) & #Locates all values that are 
 
 <h5>2.) A script where by it creates a visualization on how different features namely "Track", "Gender", and "Hometown" affects the average scores of students.</h5>
 <br>
+
+```python
+import matplotlib.pyplot as plt #Imports MatPlot Library for Data Visualization.
+```
 <h6>The relationship between "Track" and the Average Score of the students.</h6>
 
 ```python
+average1 = eceboard.groupby('Track')['Average'].mean()  #Groups the Track and Average column.
 
+average1.plot(kind="bar") #Sets the relationship as a bar graph.
+plt.title('Track on Average Score') #Title of the bar graph.
+plt.ylabel('Average Score') #Labels the y-axis as the Average Score.
+plt.xlabel('Track') #Labels the x-axis as the Track.
+plt.show() #Shows the bar graph.
+```
+
+<h6>The relationship between "Gender" and the Average Score of the students.</h6>
+
+```python
+average2 = eceboard.groupby('Gender')['Average'].mean() #Groups the Gender and Average column.
+
+average2.plot(kind="bar") #Sets the relationship as a bar graph.
+plt.title('Gender on Average Score') #Title of the bar graph.
+plt.ylabel('Average Score') #Labels the y-axis as the Average Score.
+plt.xlabel('Gender') #Labels the x-axis as the Gender.
+plt.show() #Shows the bar graph.
+```
+
+<h6>The relationship between "Hometown" and the Average Score of the students.</h6>
+
+```python
+average3 = eceboard.groupby('Hometown')['Average'].mean() #Groups the Hometown and Average column.
+
+average3.plot(kind="bar") #Sets the relationship as a bar graph.
+plt.title('Hometown on Average Score') #Title of the bar graph.
+plt.ylabel('Average Score') #Labels the y-axis as the Average Score.
+plt.xlabel('Hometown') #Labels the x-axis as the Hometown.
+plt.show() #Shows the bar graph.
 ```
