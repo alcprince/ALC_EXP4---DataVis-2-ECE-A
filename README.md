@@ -60,12 +60,14 @@ Mindy = eceboard.loc[(eceboard['Average'] >= 55) & #Locates all values that are 
 <br>
 
 ---
-2). A script where by it creates a visualization on how different features namely "Track", "Gender", and "Hometown" affects the average scores of students.
+2). A script where by it creates a visualization on how different features namely "Track", "Gender", and "Hometown" affects the average scores of students. 
 
 ```python
 import matplotlib.pyplot as plt #Imports MatPlot Library for Data Visualization.
 ```
-* <h5><ins>The relationship between "Track" and the Average Score of the students.</ins></h5>
+* <h5><ins>The relationship between "Track" and the Average Score of the students.</ins> 
+  
+  - We combine the mean of all the scores in their respective track namely <i>Instrumentation, Communication, </i>&<i> Microelectronics</i> and plot each "<ins>Track</ins>" scores in the X-axis and "<ins>Average</ins>" in the Y-axis.
 
 ```python
 average1 = eceboard.groupby('Track')['Average'].mean()  #Groups the Track and Average column.
@@ -80,7 +82,9 @@ plt.show() #Shows the bar graph.
 <h6>With this codes above, the graph between the relationship of the track and average score is this:</h6>
 <img width="624" height="551" alt="Image" src="https://github.com/user-attachments/assets/5676b17e-b0e1-4cfa-80fc-8d7f188e84e4" />
 
-* <h5><ins>The relationship between "Gender" and the Average Score of the students.</ins></h5>
+* <h5><ins>The relationship between "Gender" and the Average Score of the students.</ins>
+  
+  - We combine the mean of all the scores in their respective gender namely <i>Male</i> and <i>Female</i> and plot the scores of each "<ins>Gender</ins>" in the X-axis and "<ins>Average</ins>" in the Y-axis.</h5>
 
 ```python
 average2 = eceboard.groupby('Gender')['Average'].mean() #Groups the Gender and Average column.
@@ -95,7 +99,9 @@ plt.show() #Shows the bar graph.
 <h6>With this codes above, the graph between the relationship of the gender and average score is this:</h6>
 <img width="630" height="489" alt="Image" src="https://github.com/user-attachments/assets/85f0e3c2-05e8-4da6-9601-b2c443e02df0" />
 
-* <h5><ins>The relationship between "Hometown" and the Average Score of the students.</ins></h5>
+* <h5><ins>The relationship between "Hometown" and the Average Score of the students.</ins>
+  
+  - We combine the mean of all the scores in their respective hometown namely <i>Luzon, Visayas, </i>& <i>Mindanao</i> and plot the scores of each "<ins>Hometown</ins>" in the X-axis and "<ins>Average</ins>" in the Y-axis.</h5>
 
 ```python
 average3 = eceboard.groupby('Hometown')['Average'].mean() #Groups the Hometown and Average column.
