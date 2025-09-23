@@ -1,18 +1,17 @@
 # 2ECE - A: PA-4 - Data Wrangling and Data Visualization
 
 <h6>
-<i><u>About the files:</u></i><br>
-<u>board2.csv</u>: 
+<i>About the files:</i><br>
+<ins>board2.csv</ins>: 
   <br>&nbsp;   A .csv file containing the table indexes and values of the ECE Board Exam 2 dataset.<br><br>
-<u>ALCANTARA_DataWrang and DataVis.ipynb</u>: 
+<ins>ALCANTARA_DataWrang and DataVis.ipynb</ins>: 
   <br>&nbsp;   A Jupyter Notebook file for the assignment problem on Data Wrangling and Visualization and loads <i>ECE Exam Problem</i>.<br>
 </h6>
 
 
-<b><h3>ECE Exam Problem</h3></b>
+<b><h2>ECE Exam Problem</h2></b>
 
----
-<h4>1.) A Python script where by using data wrangling and visualization techniques, we make dataframes on the file 'board2.csv' based on the conditions given below:</h4>
+1). A Python script where by using data wrangling and visualization techniques, we make dataframes on the file <ins>'board2.csv'</ins> based on the conditions given below:
 
 ```python
 import pandas as pd #Imports Panda Library.
@@ -21,10 +20,10 @@ eceboard = pd.read_csv('board2.csv') #Loads the 'board2.csv file' for easy viewi
 eceboard
 
 ```
-<h5>Using the filename INSTRU, have a dataframe where the values displayed has their "Track" set as 'Instrumentation', "Hometown" set as 'Luzon', and their "Electronics" score is greater than 70. 
+<h5>CONDITION 1: Using the filename INSTRU, have a dataframe where the values displayed has their "<ins>Track</ins>" set as '<i>Instrumentation</i>', "<ins>Hometown</ins>" set as '<i>Luzon</i>', and their "<ins>Electronics</ins>" score is greater than 70. 
   
 <br><br>
-The values that are qualified with the previous conditions displays the values of the columns "Name", "GEAS", and "Electronics". </h5>
+The values that are qualified with the previous conditions displays the values of the columns "<ins>Name</ins>", "<ins>GEAS</ins>", and "<ins>Electronics</ins>". </h5>
   
 ```python
 Instru = eceboard.loc[(eceboard['Electronics'] > 70) &  #Locates all values in the Electronics column higher than 70.
@@ -36,11 +35,10 @@ Instru = eceboard.loc[(eceboard['Electronics'] > 70) &  #Locates all values in t
 <h6>The desired output for INSTRU should look like and have this values:</h6>
 <img width="217" height="129" alt="image" src="https://github.com/user-attachments/assets/410fa877-b6d0-4ccf-8abd-6c42b5e6c987" />
 
-
-<h5>Using the filename MINDY, have a dataframe where the values displayed has their "Gender" set as 'Female', "Hometown" set as 'Mindanao', and their "Average" score is greater or equal to 55. 
+<h5>CONDITION 2: Using the filename MINDY, have a dataframe where the values displayed has their "<ins>Gender</ins>" set as '<i>Female</i>', "<ins>Hometown</ins>" set as '<i>Mindanao</i>', and their "<ins>Average</ins>" score is greater or equal to 55. 
   
 <br><br>
-The values that are qualified with the previous conditions displays the values of the columns "Name", "Track", "Electronics", and "Average". </h5>
+The values that are qualified with the previous conditions displays the values of the columns "<ins>Track</ins>", "<ins>Electronics</ins>", and "<ins>Average</ins>". </h5>
 
 ```python
 #Making a new column called 'Average' displaying the Average scores of all the subjects in the ECE Board 2 Dataset.
@@ -62,12 +60,12 @@ Mindy = eceboard.loc[(eceboard['Average'] >= 55) & #Locates all values that are 
 <br>
 
 ---
-<h4>2.) A script where by it creates a visualization on how different features namely "Track", "Gender", and "Hometown" affects the average scores of students.</h4>
+2). A script where by it creates a visualization on how different features namely "Track", "Gender", and "Hometown" affects the average scores of students.
 
 ```python
 import matplotlib.pyplot as plt #Imports MatPlot Library for Data Visualization.
 ```
-<h5>The relationship between "Track" and the Average Score of the students.</h5>
+* <h5><ins>The relationship between "Track" and the Average Score of the students.</ins></h5>
 
 ```python
 average1 = eceboard.groupby('Track')['Average'].mean()  #Groups the Track and Average column.
@@ -82,7 +80,7 @@ plt.show() #Shows the bar graph.
 <h6>With this codes above, the graph between the relationship of the track and average score is this:</h6>
 <img width="624" height="551" alt="Image" src="https://github.com/user-attachments/assets/5676b17e-b0e1-4cfa-80fc-8d7f188e84e4" />
 
-<h5>The relationship between "Gender" and the Average Score of the students.</h5>
+* <h5><ins>The relationship between "Gender" and the Average Score of the students.</ins></h5>
 
 ```python
 average2 = eceboard.groupby('Gender')['Average'].mean() #Groups the Gender and Average column.
@@ -97,7 +95,7 @@ plt.show() #Shows the bar graph.
 <h6>With this codes above, the graph between the relationship of the gender and average score is this:</h6>
 <img width="630" height="489" alt="Image" src="https://github.com/user-attachments/assets/85f0e3c2-05e8-4da6-9601-b2c443e02df0" />
 
-<h5>The relationship between "Hometown" and the Average Score of the students.</h5>
+*<h5><ins>The relationship between "Hometown" and the Average Score of the students.</ins></h5>
 
 ```python
 average3 = eceboard.groupby('Hometown')['Average'].mean() #Groups the Hometown and Average column.
