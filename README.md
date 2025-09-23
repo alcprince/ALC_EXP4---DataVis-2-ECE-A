@@ -9,7 +9,7 @@
 </h6>
 
 <b><h4>ECE Exam Problem</h4></b>
-<h5>1.) A Python script where by using data wrangling and visualization techniques, we make dataframes based on the conditions given below:</h5>
+<h5>1.) A Python script where by using data wrangling and visualization techniques, we make dataframes on the file 'board2.csv' based on the conditions given below:</h5>
 <br>
 
 ```python
@@ -19,7 +19,7 @@ eceboard = pd.read_csv('board2.csv') #Loads the 'board2.csv file'
 eceboard
 
 ```
-<h6>Using the filename INSTRU, have a dataframe where the values displayed has their "Track" set as 'Instrumentation', "Hometown" set as 'Luzon', and their "Electronics" score is greater than 70. The values that are qualified with the previous conditions displays the values of the columns "Name", "GEAS", and "Electronics". 
+<h6>1. Using the filename INSTRU, have a dataframe where the values displayed has their "Track" set as 'Instrumentation', "Hometown" set as 'Luzon', and their "Electronics" score is greater than 70. The values that are qualified with the previous conditions displays the values of the columns "Name", "GEAS", and "Electronics". 
 <br>
 <br>
   
@@ -29,7 +29,7 @@ Instru = eceboard.loc[(eceboard['Electronics'] > 70) &  #Locates all values in t
                       (eceboard['Track'] == 'Instrumentation'), #Locates all values with 'Instrumentation' in the Track column.
                       ['Name', 'GEAS', 'Electronics']] #Displays only the columns Name, GEAS, and Electronics for those that fits all the conditions above.
 ```
-<h6>Using the filename MINDY, have a dataframe where the values displayed has their "Gender" set as 'Female', "Hometown" set as 'Mindanao', and their "Average" score is greater or equal to 55. The values that are qualified with the previous conditions displays the values of the columns "Name", "Track", "Electronics", and "Average".
+<h6>2. Using the filename MINDY, have a dataframe where the values displayed has their "Gender" set as 'Female', "Hometown" set as 'Mindanao', and their "Average" score is greater or equal to 55. The values that are qualified with the previous conditions displays the values of the columns "Name", "Track", "Electronics", and "Average".
 <br>
 <br>
 
