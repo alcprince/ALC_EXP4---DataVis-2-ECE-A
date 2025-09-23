@@ -95,7 +95,7 @@ plt.show() #Shows the bar graph.
 <h6>With this codes above, the graph between the relationship of the gender and average score is this:</h6>
 <img width="630" height="489" alt="Image" src="https://github.com/user-attachments/assets/85f0e3c2-05e8-4da6-9601-b2c443e02df0" />
 
-*<h5><ins>The relationship between "Hometown" and the Average Score of the students.</ins></h5>
+* <h5><ins>The relationship between "Hometown" and the Average Score of the students.</ins></h5>
 
 ```python
 average3 = eceboard.groupby('Hometown')['Average'].mean() #Groups the Hometown and Average column.
