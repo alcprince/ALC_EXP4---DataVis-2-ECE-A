@@ -5,10 +5,10 @@
 <u>board2.csv</u>: 
   <br>&nbsp;   A .csv file containing the table indexes and values of the ECE Board Exam 2 dataset.<br><br>
 <u>ALCANTARA_DataWrang and DataVis.ipynb</u>: 
-  <br>&nbsp;   A Jupyter Notebook file for the assignment problem on Data Wrangling and Visualization and loads <i>ECE Problem Exam Problem</i>.<br>
+  <br>&nbsp;   A Jupyter Notebook file for the assignment problem on Data Wrangling and Visualization and loads <i>ECE Exam Problem</i>.<br>
 </h6>
 
-<b><h4>ECE Problem Exam Problem</h4></b>
+<b><h4>ECE Exam Problem</h4></b>
 <h5>1.) A Python script where by using data wrangling and visualization techniques, we make dataframes based on the conditions given below:</h5>
 <br>
 
